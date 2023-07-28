@@ -20,11 +20,12 @@ export class HomeComponent {
       
       if (params.searchTerm){
         //computerPartsObservalbe = this.computerPartsService.getAllComputerPartsBySearch(params['searchTerm']);
-        debugger;
         this.computerParts = this.computerPartsService.getAllComputerPartsBySearch(params['searchTerm']);
       }
-      //else if (params.tag)
-        // computerPartsObservalbe = this.computerPartsService.getAllFoodsByTag(params.tag);
+      else if (params.tag){
+        //computerPartsObservalbe = this.computerPartsService.getAllFoodsByTag(params.tag);
+        this.computerParts = this.computerPartsService.getAllPartsByTags(params['tag'])
+      } 
       else{
         this.computerParts=computerPartsService.getAll();
       }

@@ -14,10 +14,8 @@ import { ComputerPartComponent } from './components/pages/computer-part/computer
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path:'search/:searchTerm',component:HomeComponent},
-    {path:'computer-part/:id', component:ComputerPartComponent},
-
-  // { path: 'tag/:tag', component: HomeComponent },
-  // {path:'food/:id', component:FoodPageComponent},
+  {path:'computer-part/:id', component:ComputerPartComponent},
+  { path: 'tag/:tag', component: HomeComponent },
   // {path:'cart-page', component: CartPageComponent},
   // {path:'login', component: LoginPageComponent},
   // {path:'register', component: RegisterPageComponent},

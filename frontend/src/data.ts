@@ -2,6 +2,7 @@
 // import {ComputerPart} from './app/shared/models/ComputerPart';
 // import { Tag } from './app/shared/models/Tag';
 import { ComputerPart } from './app/shared/models/ComputerPart';
+import { Tag } from './app/shared/models/Tag';
 
 export const sample_computer_parts: ComputerPart[] = [
     {
@@ -9,7 +10,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'CPU',
       price: 250,
       company: 'Intel',
-      tags: ['Processor', 'Hardware'],
+      tags: ['Processor', 'Hardware','CPU'],
       favorite: true,
       stars: 4.5,
       imageUrl: 'assets/cpu-intel-1.png',
@@ -21,7 +22,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'GPU',
       price: 400,
       company: 'NVIDIA',
-      tags: ['Graphics Card', 'Hardware'],
+      tags: ['Graphics Card', 'Hardware','GPU'],
       favorite: true,
       stars: 4.8,
       imageUrl: 'assets/gpu-nvidia-1.png',
@@ -33,7 +34,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'RAM',
       price: 100,
       company: 'Corsair',
-      tags: ['Memory', 'Hardware'],
+      tags: ['Memory', 'Hardware','RAM'],
       favorite: false,
       stars: 4.2,
       imageUrl: 'assets/ram-corsair-1.png',
@@ -45,7 +46,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'SSD',
       price: 150,
       company: 'Samsung',
-      tags: ['Storage', 'Hardware'],
+      tags: ['Storage', 'Hardware','SSD'],
       favorite: true,
       stars: 4.6,
       imageUrl: 'assets/ssd-samsung-1.png',
@@ -57,7 +58,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Motherboard',
       price: 180,
       company: 'ASUS',
-      tags: ['Motherboard', 'Hardware'],
+      tags: ['Motherboard', 'Hardware','Motherboard'],
       favorite: true,
       stars: 4.7,
       imageUrl: 'assets/motherboard-asus-1.png',
@@ -69,7 +70,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Monitor',
       price: 300,
       company: 'Dell',
-      tags: ['Monitor', 'Hardware'],
+      tags: ['Monitor', 'Hardware','Monitor'],
       favorite: false,
       stars: 4.4,
       imageUrl: 'assets/monitor-dell-1.png',
@@ -81,7 +82,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Keyboard',
       price: 50,
       company: 'Logitech',
-      tags: ['Peripherals', 'Hardware'],
+      tags: ['Peripherals', 'Hardware','Keyboard'],
       favorite: true,
       stars: 4.3,
       imageUrl: 'assets/keyboard-logitech-1.png',
@@ -93,7 +94,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Mouse',
       price: 30,
       company: 'Microsoft',
-      tags: ['Peripherals', 'Hardware'],
+      tags: ['Peripherals', 'Hardware','Mouse'],
       favorite: false,
       stars: 4.0,
       imageUrl: 'assets/mouse-microsoft-1.png',
@@ -117,7 +118,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Cooling Fan',
       price: 40,
       company: 'Cooler Master',
-      tags: ['Cooling', 'Hardware'],
+      tags: ['Cooling', 'Hardware','Cooling Fan'],
       favorite: false,
       stars: 4.1,
       imageUrl: 'assets/coolingfan-coolermaster-1.png',
@@ -129,7 +130,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Graphics Tablet',
       price: 200,
       company: 'Wacom',
-      tags: ['Peripherals', 'Hardware'],
+      tags: ['Peripherals', 'Hardware','Graphics Tablet'],
       favorite: true,
       stars: 4.9,
       imageUrl: 'assets/graphicstablet-wacom-1.png',
@@ -141,7 +142,7 @@ export const sample_computer_parts: ComputerPart[] = [
       name: 'Headphones',
       price: 120,
       company: 'Audio-Technica',
-      tags: ['Audio', 'Hardware'],
+      tags: ['Audio', 'Hardware','Headphones'],
       favorite: false,
       stars: 4.7,
       imageUrl: 'assets/headphones-ath-1.png',
@@ -150,3 +151,59 @@ export const sample_computer_parts: ComputerPart[] = [
     },
     // Add more data entries as needed...
   ];
+
+
+  export const sample_tags :Tag[] =[
+    {
+      name:'CPU',
+      count:2
+    },
+    {
+      name:'RAM',
+      count:2
+    }, 
+    {
+      name:'GPU',
+      count:2
+    },
+    {
+      name:'Headphones',
+      count:2
+    },
+    {
+      name:'Graphics Tablet',
+      count:2
+    },
+    {
+      name:'Power Supply',
+      count:2
+    },
+    {
+      name:'Cooling Fan',
+      count:2
+    },
+    {
+      name:'Keyboard',
+      count:2
+    },
+    {
+      name:'CPU',
+      count:2
+    },
+    {
+      name:'Motherboard',
+      count:2
+    },
+    {
+      name:'SSD',
+      count:2
+    },
+    {
+      name:'Mouse',
+      count:2
+    },
+    {
+      name:'Monitor',
+      count:2
+    },
+  ]
