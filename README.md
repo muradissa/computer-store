@@ -1,4 +1,4 @@
-##  Lessons
+##  Computer Store Project
 1. Introduciton to the course
 2. Install development tools
 3. Create Angular App
@@ -11,10 +11,10 @@
    2. Add Html
    3. Add CSS
 
-5. List Foods
-    1. Create Food model
+5. List Computer Part
+    1. Create Computer Part model
     2. Create data.ts
-       1. Add sample foods
+       1. Add sample Computer Part
     3. Add images to assets
     4. Create Food service
     5. Create Home component
@@ -46,9 +46,9 @@
       3. Add html
       4. Add css
 
-8. Food Page
-   1. Add method to food service
-   2. Generate Food Page component
+8. Computer Part Page
+   1. Add method to Computer Part service
+   2. Generate Computer Part Page component
       1. Add Route
       2. Add ts
       3. Add html
