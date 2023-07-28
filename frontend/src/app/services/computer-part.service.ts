@@ -23,4 +23,8 @@ export class ComputerPartService {
       ||  computerpart.company.toLowerCase().includes(searchTerm.toLowerCase())
       )
   }
+
+  getComputerPartById(computerPartId : string): ComputerPart{
+    return this.getAll().find(computerPart => computerPart.id === computerPartId) ?? new ComputerPart;
+  }
 }

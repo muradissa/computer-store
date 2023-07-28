@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './components/partials/search/search.component';
+import { ComputerPartComponent } from './components/pages/computer-part/computer-part.component';
 // import { RatingComponent } from 'ng-starrating/lib/rating.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SearchComponent } from './components/partials/search/search.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
+    ComputerPartComponent,
   ],
   imports: [
     BrowserModule,

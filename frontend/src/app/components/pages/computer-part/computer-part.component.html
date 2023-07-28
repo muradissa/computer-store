@@ -1,0 +1,47 @@
+<div *ngIf="computerPart" class="container">
+    <img [src]="computerPart.imageUrl" [alt]="computerPart.name"/>
+  
+    <div class="details">
+      <div class="header">
+        <span class="name">
+          {{computerPart.name}}
+        </span>
+        <span class="favorite {{computerPart.favorite? '': 'not'}}">❤</span>
+      </div>
+      <!-- <div class="rating">
+        <star-rating [stars]="food.stars" [size]="1.8" />
+      </div> -->
+  
+      <div class="origins">
+        <span *ngFor="let origin of computerPart.origins">
+          {{origin}}
+        </span>
+      </div>
+  
+      <div class="tags">
+        <a *ngFor="let tag of computerPart.tags" routerLink="/tag/{{tag}}">
+          {{tag}}
+        </a>
+      </div>
+  
+      <!-- <div class="cook-time">
+        <span>
+          Time to cook about <strong>{{computerPart.cookTime}}</strong> minutes
+        </span>
+      </div>
+   -->
+      <div class="description">
+        <span>
+            {{computerPart.description}}
+        </span>
+      </div>
+      <div class="price">
+        <span>
+          {{computerPart.price | currency}}
+        </span>
+      </div>
+  
+      <button (click)="addToCart()">Add To Cart</button>
+  
+    </div>
+  </div>

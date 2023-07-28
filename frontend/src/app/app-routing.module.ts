@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ComputerPartComponent } from './components/pages/computer-part/computer-part.component';
 // import { AuthGuard } from './auth/guards/auth.guard';
 // import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 // import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
@@ -13,6 +14,8 @@ import { HomeComponent } from './components/pages/home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path:'search/:searchTerm',component:HomeComponent},
+    {path:'computer-part/:id', component:ComputerPartComponent},
+
   // { path: 'tag/:tag', component: HomeComponent },
   // {path:'food/:id', component:FoodPageComponent},
   // {path:'cart-page', component: CartPageComponent},
