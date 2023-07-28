@@ -1,0 +1,41 @@
+<ul>
+    <li *ngFor="let computerPart of computerParts">
+      <a routerLink="/computerPart/{{computerPart.id}}">
+        <img [src]="computerPart.imageUrl" [alt]="computerPart.name" />
+        <div class="content">
+          <div class="name">
+            {{computerPart.name}} - {{computerPart.company}}
+          </div>
+          <span class="favorite {{computerPart.favorite?'':'not'}}">
+            ❤
+          </span>
+          <div class="stars">
+            <star-rating [stars]="computerPart.stars" />
+          </div>
+          <div class="product-item-footer">
+            <div class="origins">
+              <span *ngFor="let origin of computerPart.origins">
+                {{origin}}
+              </span>
+            </div>
+  
+            <!-- <div class="cook-time">
+              <span>🕒</span>
+              {{computerPart.description}}
+            </div> -->
+          </div>
+  
+          <div class="price">
+            <span>
+              {{computerPart.price | currency}}
+            </span>
+          </div>
+          <div class="description">
+            <span>
+                {{computerPart.description}}
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
