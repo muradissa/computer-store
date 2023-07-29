@@ -1,1 +1,8 @@
-<p>not-found works!</p>
+<div *ngIf="visible">
+    <div  *ngIf="showImg">
+        <img src="../../../../assets/not-found.jpg"/>
+
+    </div>
+    {{notFoundMessage}}
+    <a [routerLink]="resetLinkRoute">{{resetLinkText}}</a>
+</div>

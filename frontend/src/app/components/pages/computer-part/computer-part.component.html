@@ -1,4 +1,12 @@
-<div *ngIf="computerPart" class="container">
+<app-not-found
+  [visible]="!computerPart.id"
+  notFoundMessage="Item Not Found"
+  resetLinkText="Back To Homepage"
+  [showImg]="true"
+  >
+</app-not-found>
+
+<div *ngIf="computerPart.id" class="container">
     <img [src]="computerPart.imageUrl" [alt]="computerPart.name"/>
   
     <div class="details">

@@ -33,6 +33,7 @@ export class ComputerPartComponent implements OnInit{
           //   this.computerPart = serverFood;
           // });
           this.computerPart = computerPartService.getComputerPartById(params.id);
+          debugger;
         }
         
       })

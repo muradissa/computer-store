@@ -1,5 +1,11 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<app-not-found 
+[visible]="!computerParts || !computerParts.length"  
+notFoundMessage="Nothing Found!"
+resetLinkText="Reset Search"
+[showImg]="false"
+></app-not-found>
 <ul>
     <li *ngFor="let computerPart of computerParts">
       <a routerLink="/computer-part/{{computerPart.id}}">
