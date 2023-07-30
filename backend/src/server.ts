@@ -3,6 +3,7 @@
 // import path from 'path';
 import express from "express";
 import cors from "cors";
+import { sample_computer_parts, sample_tags } from "./data";
 // import foodRouter from './routers/food.router';
 // import userRouter from './routers/user.router';
 // import orderRouter from './routers/order.router';
@@ -27,9 +28,35 @@ app.use(cors({
 // })
 
 app.get('/api/computer-parts', (req, res) => {
-    res.send("Hello World")
+    res.send(sample_computer_parts)
 });
 
+app.get('/api/computer-parts/:id', (req, res) => {
+    res.send(sample_computer_parts.filter(item => item.id === req.params.id)[0])
+});
+
+app.get('/api/computer-parts/tags', (req, res) => {
+    res.send(sample_tags)
+});
+
+app.get('/api/computer-parts/tags/all', (req, res) => {
+    res.send(sample_tags)
+});
+
+
+app.get('/api/computer-parts/tag/:tagName', (req, res) => {
+    res.send(sample_computer_parts.filter(item => item.name === req.params.tagName))
+});
+
+app.get('/api/computer-parts/search/:searchTerm', (req, res) => {
+    const searchTerm = req.params.searchTerm;
+    const computerParts = sample_computer_parts.filter(computerpart => 
+        computerpart.name.toLowerCase().includes(searchTerm.toLowerCase())
+        ||  computerpart.description.toLowerCase().includes(searchTerm.toLowerCase())
+        ||  computerpart.company.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    res.send(computerParts)
+});
 
 
 // const port = process.env.PORT || 5000;

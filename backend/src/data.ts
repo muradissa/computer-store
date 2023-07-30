@@ -2,6 +2,7 @@
 // import { ComputerPart } from './app/shared/models/ComputerPart';
 // import { Tag } from './app/shared/models/Tag';
 
+
 export const sample_computer_parts: any[] = [
     {
       id: 'part1',
@@ -151,57 +152,57 @@ export const sample_computer_parts: any[] = [
   ];
 
 
-  export const sample_tags :any[] =[
-    {
-      name:'CPU',
-      count:2
-    },
-    {
-      name:'RAM',
-      count:2
-    }, 
-    {
-      name:'GPU',
-      count:2
-    },
-    {
-      name:'Headphones',
-      count:2
-    },
-    {
-      name:'Graphics Tablet',
-      count:2
-    },
-    {
-      name:'Power Supply',
-      count:2
-    },
-    {
-      name:'Cooling Fan',
-      count:2
-    },
-    {
-      name:'Keyboard',
-      count:2
-    },
-    {
-      name:'CPU',
-      count:2
-    },
-    {
-      name:'Motherboard',
-      count:2
-    },
-    {
-      name:'SSD',
-      count:2
-    },
-    {
-      name:'Mouse',
-      count:2
-    },
-    {
-      name:'Monitor',
-      count:2
-    },
-  ]
+  export const sample_tags :any[] = [
+  {
+    name:'CPU',
+    count:2
+  },
+  {
+    name:'RAM',
+    count:2
+  }, 
+  {
+    name:'GPU',
+    count:2
+  },
+  {
+    name:'Headphones',
+    count:2
+  },
+  {
+    name:'Graphics Tablet',
+    count:2
+  },
+  {
+    name:'Power Supply',
+    count:2
+  },
+  {
+    name:'Cooling Fan',
+    count:2
+  },
+  {
+    name:'Keyboard',
+    count:2
+  },
+  {
+    name:'CPU',
+    count:2
+  },
+  {
+    name:'Motherboard',
+    count:2
+  },
+  {
+    name:'SSD',
+    count:2
+  },
+  {
+    name:'Mouse',
+    count:2
+  },
+  {
+    name:'Monitor',
+    count:2
+  },
+]

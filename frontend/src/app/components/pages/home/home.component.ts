@@ -14,26 +14,26 @@ export class HomeComponent {
   computerParts :ComputerPart[]=[];
 
   constructor(private computerPartsService:ComputerPartService , activatedRoute: ActivatedRoute){
-    // let computerPartsObservalbe:Observable<ComputerPart[]>;
+    let computerPartsObservalbe:Observable<ComputerPart[]>;
     activatedRoute.params.subscribe((params) => {
       // to enable params.searchTerm spot params['searchTerm'] go to tsconfog.json and change "noPropertyAccessFromIndexSignature" to false,
       
       if (params.searchTerm){
-        //computerPartsObservalbe = this.computerPartsService.getAllComputerPartsBySearch(params['searchTerm']);
-        this.computerParts = this.computerPartsService.getAllComputerPartsBySearch(params['searchTerm']);
+        computerPartsObservalbe = this.computerPartsService.getAllComputerPartsBySearch(params['searchTerm']);
+        // this.computerParts = this.computerPartsService.getAllComputerPartsBySearch(params['searchTerm']);
       }
       else if (params.tag){
-        //computerPartsObservalbe = this.computerPartsService.getAllFoodsByTag(params.tag);
-        this.computerParts = this.computerPartsService.getAllPartsByTags(params['tag'])
+        computerPartsObservalbe = this.computerPartsService.getAllPartsByTags(params.tag);
+        // this.computerParts = this.computerPartsService.getAllPartsByTags(params['tag'])
       } 
       else{
-        this.computerParts=computerPartsService.getAll();
+        computerPartsObservalbe = this.computerPartsService.getAll();
+        //this.computerParts=computerPartsService.getAll();
       }
-        // computerPartsObservalbe.subscribe((serverComputerParts) => {
-        //   this.computerParts = serverComputerParts;
-        // })
+        computerPartsObservalbe.subscribe((serverComputerParts) => {
+          this.computerParts = serverComputerParts;
+        })
     })
-    // this.computerParts=computerPartsService.getAll();
   }
 
   ngOnInit(): void {

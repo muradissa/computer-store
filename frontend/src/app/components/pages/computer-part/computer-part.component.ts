@@ -12,32 +12,20 @@ import { ComputerPart } from 'src/app/shared/models/ComputerPart';
 export class ComputerPartComponent implements OnInit{
 
   computerPart!: ComputerPart;
-  // constructor(activatedRoute:ActivatedRoute, computerPartService:ComputerPartService,private cartService:CartService, private router: Router) {
-  //   activatedRoute.params.subscribe((params) => {
-  //     if(params.id)
-  //     computerPartService.getComputerPartById(params.id).subscribe(serverFood => {
-  //       this.computerPart = serverFood;
-  //     });
-  //   })
-  //  }
 
   constructor(
     activatedRoute:ActivatedRoute,
     computerPartService:ComputerPartService, 
     private cartService:CartService,
     private router: Router) {
-      
         activatedRoute.params.subscribe((params) => {
         if(params.id){
-          // computerPartService.getComputerPartById(params.id).subscribe(serverFood => {
-          //   this.computerPart = serverFood;
-          // });
-          this.computerPart = computerPartService.getComputerPartById(params.id);
-          debugger;
+          computerPartService.getComputerPartById(params.id).subscribe(serverFood => {
+            this.computerPart = serverFood;
+          });
+          // this.computerPart = computerPartService.getComputerPartById(params.id);
         }
-        
       })
-     
    }
 
   ngOnInit(): void {
