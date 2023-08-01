@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="details">
+      <!-- <app-title title="Login"></app-title> -->
+      <h1>Login</h1>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="submit()">
+  
+        <text-input
+            [control]="fc.email"
+            [showErrorsWhen]="isSubmitted"
+            type="email"
+            label="Email">
+        </text-input>
+    
+        <text-input
+            [control]="fc.password"
+            [showErrorsWhen]="isSubmitted"
+            type="password"
+            label="Password">
+        </text-input>
+  
+        <default-button text="Login"></default-button>
+        <div class="register">
+            New user? &nbsp;
+            <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
+                Register here
+            </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- <div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username (Email)</label>
+        <input type="email" id="username" formControlName="username" class="form-control" />
+        <div *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched" class="error-message">
+          <span *ngIf="loginForm.controls['username'].errors?.required">Username is required.</span>
+          <span *ngIf="loginForm.controls['username'].errors?.email">Please enter a valid email address.</span>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" class="form-control" />
+        <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="error-message">
+          <span *ngIf="loginForm.controls['password'].errors?.required">Password is required.</span>
+          <span *ngIf="loginForm.controls['password'].errors?.minlength">Password should be at least 6 characters long.</span>
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div> -->

@@ -206,3 +206,21 @@ export const sample_computer_parts: any[] = [
     count:2
   },
 ]
+
+
+export const sample_users: any[] = [
+  {
+    name: "test admin",
+    email: "admin@gmail.com",
+    password: "12345",
+    address: "Toronto On",
+    isAdmin: true,
+  },
+  {
+    name: "test user",
+    email: "user@gmail.com",
+    password: "12345",
+    address: "Shanghai",
+    isAdmin: false,
+  },
+];

@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 600px;
+    max-width: 700px;
+    margin : 0 auto;
+    margin-top: 3rem;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    box-shadow: 0 1px 10px rgb(201, 201, 201);
+}
+
+.details{
+    width: 28rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error-list{
+    color: red;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
